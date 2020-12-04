@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Enterprise", "LoginValidation", "UserLogin", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Register", "Register", "UserLogin")</li>
+                    <li>@Html.ActionLink("Browse", "RegularUserMediaBrowsing", "Home")</li>
+
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            User
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Reserve", "Reserve", "Home")</li>
+                            <li>@Html.ActionLink("Borrow", "Borrow", "Home")</li>
+                            <li>@Html.ActionLink("Return", "Return", "Home")</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Admin
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Edit Media", "EditMedia", "Home")</li>
+                            <li>@Html.ActionLink("Edit Genre", "EditGenre", "Home")</li>
+                            <li>@Html.ActionLink("Edit Language", "EditLanguage", "Home")</li>
+                            <li>@Html.ActionLink("Edit Director", "EditDirector", "Home")</li>
+                            <li>@Html.ActionLink("Edit User", "EditUser", "Home")</li>
+                            <li>@Html.ActionLink("Report", "Report", "Home")</li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="form-signsin" action="../Home/Signout" method="post" style="float:right;">
+                    <button type="submit" class="btn btn-info" style="margin-top:12px;">Sign  out </button>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

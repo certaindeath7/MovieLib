@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{C161F02C-F77E-43B0-AC9F-131E931E86BF}|">
+  <MonoDevelop.Ide.ItemProperties.View PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Model/Implementations/MediaManagementImpl.cs">
+    <Files>
+      <File FileName="Model/Implementations/MediaManagementImpl.cs" Line="41" Column="97" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Assignment2" expanded="True">
+            <Node name="Model" expanded="True">
+              <Node name="Implementations" expanded="True">
+                <Node name="MediaManagementImpl.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

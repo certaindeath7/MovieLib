@@ -1,0 +1,25 @@
+/Volumes/[C] Windows 10.hidden/Users/nguyentranphucduc/source/repos/Assignment2/Model/obj/Debug/Model.csprojAssemblyReference.cache
+/Volumes/[C] Windows 10.hidden/Users/nguyentranphucduc/source/repos/Assignment2/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache
+/Volumes/[C] Windows 10.hidden/Users/nguyentranphucduc/source/repos/Assignment2/Model/obj/Debug/Model.dll
+/Volumes/[C] Windows 10.hidden/Users/nguyentranphucduc/source/repos/Assignment2/Model/obj/Debug/Model.pdb
+C:\Users\nguyentranphucduc\source\repos\Assignment2\Model\bin\Debug\Model.dll.config
+C:\Users\nguyentranphucduc\source\repos\Assignment2\Model\bin\Debug\Model.dll
+C:\Users\nguyentranphucduc\source\repos\Assignment2\Model\bin\Debug\Model.pdb
+C:\Users\nguyentranphucduc\source\repos\Assignment2\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\nguyentranphucduc\source\repos\Assignment2\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\nguyentranphucduc\source\repos\Assignment2\Model\obj\Debug\Model.dll
+C:\Users\nguyentranphucduc\source\repos\Assignment2\Model\obj\Debug\Model.pdb
+C:\Users\ntpd10\Downloads\Assignment2\Assignment2\Model\bin\Debug\Model.dll.config
+C:\Users\ntpd10\Downloads\Assignment2\Assignment2\Model\bin\Debug\Model.dll
+C:\Users\ntpd10\Downloads\Assignment2\Assignment2\Model\bin\Debug\Model.pdb
+C:\Users\ntpd10\Downloads\Assignment2\Assignment2\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\ntpd10\Downloads\Assignment2\Assignment2\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\ntpd10\Downloads\Assignment2\Assignment2\Model\obj\Debug\Model.dll
+C:\Users\ntpd10\Downloads\Assignment2\Assignment2\Model\obj\Debug\Model.pdb
+C:\Users\ntpd10\Desktop\Assignment2\Assignment2\Model\bin\Debug\Model.dll.config
+C:\Users\ntpd10\Desktop\Assignment2\Assignment2\Model\bin\Debug\Model.dll
+C:\Users\ntpd10\Desktop\Assignment2\Assignment2\Model\bin\Debug\Model.pdb
+C:\Users\ntpd10\Desktop\Assignment2\Assignment2\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\ntpd10\Desktop\Assignment2\Assignment2\Model\obj\Debug\Model.dll
+C:\Users\ntpd10\Desktop\Assignment2\Assignment2\Model\obj\Debug\Model.pdb
+C:\Users\ntpd10\Desktop\Assignment2\Assignment2\Model\obj\Debug\Model.csprojAssemblyReference.cache

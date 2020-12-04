@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "EditMedia";
+}
+
+<h2>Edit Media Page</h2>
+<h3>@ViewBag.EditMessage</h3>
+
+<div class="container">
+    <!-- inserting section-->
+    <h3> Add Media</h3>
+    <div class="container">
+        <div class="row">
+            <form action="../EditMedia/CreateMedia" method="post">
+                <!-- Admin choose to create / update or delete media -->
+                <div class="form-label-group" style="margin-top:10px; display:inline;">
+                    <select id="criteria" name="criteria" required>
+                        <option value="">Select Creaate / Update / Delete</option>
+                        <option value="Create">Create</option>
+                        <option value="Update">Update</option>
+                        <option value="Delete">Delete</option>
+                    </select>
+                </div>
+
+                <div class="form-label-group" style="margin-top:10px; display:inline;">
+                    <label style="margin-right:25px;">Media Title</label> <input type="text" name="TitleID" class="form-control" placeholder="TitleID" style="display:inline; margin-bottom:10px" required>
+                </div>
+
+                <div style="margin-top:10px; display:inline;">
+                    <label style="margin-right:40px;">Genre ID</label> <input name="GenreID" type="number" class="form-control" placeholder="GenreID" style="display:inline; margin-bottom:10px" required>
+                </div><br />
+                <div style="margin-top:30px;display:inline;">
+                    <label style="margin-right:27px;">Director ID</label> <input name="DirectorID" type="number" class="form-control" placeholder="DirectorID" style="display:inline; margin-bottom:10px " required>
+
+                </div>
+                <div class="form-label-group" style="margin-top:10px;display:inline;">
+                    <label style="margin-right:15px;">Language ID</label> <input name="LanguageID" type="number" class="form-control" placeholder="LanguageID" style="display:inline; margin-bottom:10px " required>
+
+                </div><br />
+                <div class="form-label-group" style="margin-top:10px;display:inline;">
+                    <label style="margin-right:20px;">PublishYear</label> <input name="PublishYearID" type="number" class="form-control" placeholder="PublishYear" style="display:inline" required>
+                </div>
+                <div class="form-label-group" style="margin-top:10px;display:inline;">
+                    <label style="margin-right:50px;">Budget</label> <input name="BudgetID" type="number" class="form-control" placeholder="Budget" style="display:inline" required>
+                </div>
+                <div class="form-label-group" style="margin-top:10px; display:inline;">
+                    <label style="margin-right:25px;">Media ID</label> <input type="text" name="MediaID" class="form-control" placeholder="MediaID(Just for Update and Delete)" style="display:inline; margin-bottom:10px" >
+                </div>
+                <div><button class="btnSubmit" type="submit" style="margin-top:100px; float:left;">Action</button></div>
+            </form>
+            </div>
+        </div>
+
+        <!-- print out the table-->
+    <div class="table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">MediaID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Director</th>
+                        <th scope="col">Language</th>
+                        <th scope="col">Publish Year</th>
+                        <th scope="col">Budget</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var media in ViewBag.allMedia)
+                    {
+
+                        <tr>
+                            <th scope="row">@media.MediaID</th>
+                            <td>@media.Title</td>
+                            <td>@media.Genre</td>
+                            <td>@media.Director</td>
+                            <td>@media.Language</td>
+                            <td>@media.PublishYear</td>
+                            <td>@media.Budget</td>
+                        </tr>
+
+                    }
+
+                </tbody>
+            </table>
+    </div>
+
+
+    </div>
+

@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Borrow";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.BorrowMessage</h3>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+
+                    <form class="form-signsin" action="../Borrow/BorrowMedia" method="post">
+
+
+                        <div class="form-label-group" style="margin-top:10px;">
+                            <label style="margin-right:80px;">Movie Title</label> <input type="text" name="MovieTitle" class="form-control" placeholder="Title" style="display:inline" required>
+                        </div>
+
+
+                        <div class="form-label-group" style="margin-top:10px;">
+                            <label style="margin-right:70px;">Borrow Date</label> <input type="date" name="Today" class="form-control" placeholder="Today" style="display:inline" required>
+                        </div>
+
+                        <div class="form-label-group" style="margin-top:10px;">
+                            <label style="margin-right:10px;">Estimated return date</label> <input type="date" name="EstimatedReturnDate" class="form-control" placeholder="EstimatedReturnDate" style="display:inline" required>
+                        </div>
+
+                        <button class="btnSubmit" type="submit" style="margin-top:20px;">
+                            Borrow
+                        </button>
+                        <input type="reset" value="Reset" class="btnSubmit" style="margin-top:20px; display:inline; margin-left:20px;">
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="table">
+
+        <h3>Media List</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Media Id</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">PublishYear</th>
+                    <th scope="col">Budget</th>
+                    <th scope="col">Director</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Language</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var media in ViewBag.AvavilableMediaList)
+                {
+
+                    <tr>
+                        <th scope="row">@media.MediaID</th>
+                        <td>@media.Title</td>
+                        <td>@media.PublishYear</td>
+                        <td>
+                            @media.Budget
+                        </td>
+                        <td>@media.Director</td>
+                        <td>@media.Genre</td>
+                        <td>@media.Language </td>
+                    </tr>
+
+
+                }
+
+            </tbody>
+        </table>
+
+
+
+
+
+    </div>
+</div>
+

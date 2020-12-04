@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "RegularUserMediaBrowsing";
+}
+
+<h2>Media Browsing</h2>
+
+<h3>@ViewBag.LoginMessage</h3>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+
+                    <form class="form-signsin" action="../Home/SearchMedia" method="post">
+                        <div class="form-label-group">
+                            <label>Keyword</label>    <input type="text" name="keyword" class="form-control" placeholder="keyword" style="display:inline">
+                        </div>
+
+                        <select id="criteria" name="criteria" required>
+                            <option value="">Criteria</option>
+                            <option value="Title">Title</option>
+                            <option value="Genre">Genre</option>
+                            <option value="Director">Director</option>
+                            <option value="Language">Language</option>
+                        </select>
+
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="margin-top:20px;">
+                            Search
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">MediaID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Director</th>
+                    <th scope="col">Language</th>
+                    <th scope="col">Publish Year</th>
+                    <th scope="col">Budget</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var media in ViewBag.allMedia)
+                {
+
+                    <tr>
+                        <th scope="row">@media.MediaID</th>
+                        <td>@media.Title</td>
+                        <td>@media.Genre</td>
+                        <td>@media.Director</td>
+                        <td>@media.Language</td>
+                        <td>@media.PublishYear</td>
+                        <td>@media.Budget</td>
+                    </tr>
+
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

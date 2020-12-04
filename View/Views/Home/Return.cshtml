@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Return";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.returnMessage</h3>
+
+<h3>Media List</h3>
+<table class="table" style="font-size:12px;">
+    <thead>
+        <tr>
+            <th scope="col">Media Id</th>
+            <th scope="col">UID</th>
+            <th scope="col">Title</th>
+            <th scope="col">PublishYear</th>
+            <th scope="col">Budget</th>
+            <th scope="col">Director</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Language</th>
+            <th scope="col">Borrow date</th>
+            <th scope="col">Estimated Return date</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var media in ViewBag.BeingBorrowedList)
+        {
+
+            <tr>
+                <th scope="row">@media.MediaID</th>
+                <td>@media.UID</td>
+                <td>@media.Title</td>
+                <td>@media.PublishYear</td>
+                <td>
+                    @media.Budget
+                </td>
+                <td>@media.Director</td>
+                <td>@media.Genre</td>
+                <td>@media.Language</td>
+                <td>@media.DateBorrow</td>
+                <td>@media.DateReturn <button style="margin-right:10px; float:right;" onclick="ReturnMedia(@media.MediaID)">Return</button></td>
+            </tr>
+
+
+        }
+
+    </tbody>
+</table>
+
+
+<script type="text/javascript">
+    function ReturnMedia(mediaId) {
+
+        $.post("../Borrow/ReturnMedia", { mediaId: mediaId }, function (data) {
+            if (data) {
+                alert(data)
+                location.reload();
+
+            }
+            else {
+                alert("Cannot return")
+            }
+        });
+
+    }
+</script>
